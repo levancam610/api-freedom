@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"    />
+    <link rel="stylesheet" href="/assets/fonts/simple-line-icons/css/simple-line-icons.css">
+    <!--<link rel="stylesheet" href="/assets/fonts/iconsmind/style.css">-->
+    <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
+    <title>Freedom streetwear</title>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=548991405508631&autoLogAppEvents=1"></script>
+
+    <style>
+    .loading {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgba(100,100,100,.2 );
+        border-radius: 50%;
+        border-top-color: rgba(100,100,100,.7 );
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+        left: calc(50% - 15px);
+        top: calc(50% - 15px);
+        position: fixed;
+        z-index: 1;
+        }
+    .select-validation-error > .react-select__control {
+        border-color: #dc3545 !important;
+    }
+    .validation-error { display: unset !important;}
+        @keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+        }
+        @-webkit-keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+    <script>
+        console.log("222222222222222");
+        var theme = "light.purple";
+        if (typeof Storage !== "undefined") {
+            if (localStorage.getItem("themeColor")) {
+                theme = localStorage.getItem("themeColor");
+            }
+        }
+        if(theme.indexOf("dark") != -1) {
+            document.documentElement.style.background = "#1b191b";
+        }
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml            : true,
+                version          : 'v3.3'
+            });
+        };
+
+        (function(d, s, id) {
+            console.log("hihihi");
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'))
+
+    </script>
+    <div id="root">
+        <div class="loading"></div>
+        <div className="fb-customerchat"
+             page_id="478797662870063"
+             logged_in_greeting="Hi! How can we help you?"
+             logged_out_greeting="Hi! How can we help you?">
+        </div>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

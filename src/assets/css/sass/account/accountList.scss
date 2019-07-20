@@ -1,0 +1,24 @@
+$background : blue;
+.btnAddAccountGroup {
+  width: 100% !important;
+}
+.labelAccount {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.selectShop {
+  width: 100%;
+}
+.modal-content {
+  height: 100%;
+}
+.formAdmin{
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+  .modal-footer {
+    width: 100%;
+  }
+}
+
+
